@@ -12,4 +12,12 @@
       - kea-doc
     state: latest
 
+- name: Template kea-dhcp4.conf to /etc/kea/kea-dhcp4.conf
+  ansible.builtin.template:
+    src: templates/etc/kea/kea-dhcp4.conf
+    dest: /etc/kea/kea-dhcp4.conf
+    owner: root
+    group: kea
+    mode: '0640'
+
 ...
