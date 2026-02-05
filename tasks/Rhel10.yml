@@ -1,0 +1,15 @@
+---
+
+- name: Update and Upgrade
+  ansible.builtin.dnf:
+    name: "*"
+    state: latest
+
+- name: Install the latest version of Kea with documentation
+  ansible.builtin.dnf:
+    name:
+      - kea
+      - kea-doc
+    state: latest
+
+...
